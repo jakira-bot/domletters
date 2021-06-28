@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+
+# Finds the dominat letter in a alphabetic word described by the readme file
+
+# Leanered of fileinput libary from: https://docs.python.org/3/library/fileinput.html
+import fileinput
+count = 0
+
+for line in fileinput.input():
+    text = line.split()
+    if len(text) > 0:
+        for word in text:
+            test = 0
+            #checks for any non alphabetic characters
+            for letter in word:
+                if letter.isalpha() == False:
+                    test = 1
+            if test == 0:
+                #finds the dominant letter and how many of them are there
+                dom = 1
+                word = word.lower()
+                # Inpired by: https://www.geeksforgeeks.org/python-count-occurrences-of-a-character-in-string/ method#1
+                for letter in word:
+                    total = 0
+                    for let in word:
+                        if letter == let:
+                            total = total + 1
+                    if total > dom:
+                        dom = total
+                count = count + dom
+print("Dominant letter count is", count, ".")

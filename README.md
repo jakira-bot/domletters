@@ -29,21 +29,6 @@ upper and lowercase letters as equivalent. Examples:
 
 ## Build and Run
 
-(*These instructions are for a compiled language like
-C++. For an interpreted language like Python, delete these
-instructions and use those below.*)
-
-To build the program, type `make`. This will use the file
-named `Makefile` to compile the program.
-
-To run the program once it is built, say
-
-    ./domletters <input.txt
-
-where `input.txt` is the input file to be processed.
-
-## Build and Run
-
 (*These instructions are for an interpreted language like
 Python. For a compiled language like C++, delete these
 instructions and use those above. Note that your script
@@ -61,7 +46,7 @@ where `input.txt` is the input file to be processed.
 
 When run using the file `sentence.txt` in this distribution,
 the program will produce a dominant letter count of 20. When
-run on `swift.txt` it will produce 71.
+run on `swift.txt` it will produce 71. `test.txt` should produce 18.
 
 ## Acknowledgements
 
